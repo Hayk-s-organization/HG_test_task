@@ -1,0 +1,31 @@
+{
+  "name": "hyperguest-test-task",
+  "version": "1.0.0",
+  "description": "This was a nice task",
+  "main": "dist/main.js",
+  "scripts": {
+    "start:dev": "ts-node src/main.ts",
+    "start": "node dist/main",
+    "build": "tsc ./src/*.ts",
+    "lint": "npx eslint ./src/*.ts",
+    "lint:fix": "npx eslint ./src/*.ts --fix",
+    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,json,md}\""
+  },
+  "keywords": [],
+  "author": "Hayk Ghazaryan",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
