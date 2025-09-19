@@ -39,7 +39,7 @@ export class Queue {
   }
 
   Enqueue = (message: Message) => {
-    const groupId = (message as any)[this.messageGroupId];
+    const groupId = message[this.messageGroupId];
     const messages = this.groupedMessages.get(groupId) || new Set();
     if (!messages.size) {
       this.readyToProcess.add(groupId);
@@ -49,7 +49,7 @@ export class Queue {
     this.size++;
   };
 
-  Dequeue = (workerId: number): Message | undefined => {
+  Dequeue = (): Message | undefined => {
     if (!this.readyToProcess.size) return undefined;
 
     const groupId = this.readyToProcess.keys().next().value!;
